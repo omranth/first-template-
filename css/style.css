@@ -1,0 +1,655 @@
+/* Start variables  */
+:root {
+    --main-color: #10CAB7;
+    --second-color: #2C4755;
+
+    --main-padding: 60px;
+}
+
+/* End  variables  */
+
+
+/* ------------------------------------------------- */
+/* const  */
+
+.spacial-heading {
+    text-align: center;
+    font-size: 120px;
+    color: #eaeaea;
+    font-weight: bold;
+    letter-spacing: -3px;
+
+
+}
+
+.spacial-heading+p {
+    text-align: center;
+    margin-top: -45px;
+    font-size: 22px;
+    color: var(--second-color);
+    margin-bottom: 60px;
+}
+
+/* const  */
+/* ------------------------------------------------- */
+
+
+@media (max-width: 767px) {
+    .spacial-heading {
+        font-size: 60px;
+    }
+
+    .spacial-heading+p {
+        margin-top: -25px;
+        font-size: 13px;
+    }
+}
+
+/* const  */
+/* ------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans";
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* ------------------------------------------------- */
+
+.parent {
+    background-color: #fff;
+}
+
+.parent .container {
+    position: relative;
+    padding: 15px;
+    border: none;
+    box-shadow: -8px -8px 24px 0px #e2e2e2;
+    background-color: #fff;
+
+}
+
+
+.parent .container .image {
+    display: inline-block;
+    width: 50px;
+}
+
+.parent .container a img {
+    width: 100%;
+}
+
+.parent .container .icon {
+    position: absolute;
+    content: '';
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    direction: rtl;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.parent .container .icon span {
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 3px;
+}
+
+.parent .container .icon span:nth-child(2) {
+    margin: 5px 0;
+    width: 20px;
+    transition: width 0.3s ease;
+}
+
+.parent .container .icon:hover span:nth-child(2) {
+    width: 30px;
+}
+
+.parent .container nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background: rgba(44, 71, 85, 0.95);
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    transition: height 0.1s ease;
+    transition: width 0.4s ease;
+    z-index: 999;
+}
+
+.parent .container nav ul {
+    margin-left: 30px;
+}
+
+.parent .container nav svg {
+    color: white;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+}
+
+.parent .container nav ul h3 {
+    color: #637988;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    padding: 10px 0;
+}
+
+
+.parent .container nav li {
+    list-style: none;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.parent .container nav li a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.parent .container nav li a:hover {
+    padding-left: 10px;
+}
+
+
+.parent .container nav h5 {
+    margin-left: 30px;
+    flex-grow: 3;
+    color: #637988;
+    align-content: center;
+    align-self: self-start;
+}
+
+/* ------------------------------------------------- */
+/* start Up */
+.up {
+    position: fixed;
+    right: 25px;
+    bottom: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    /* background: #00aeff; */
+    background-image: url(../image/palnt.png);
+    /* border-radius: 50%; */
+    font-size: 20px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    display: none;
+    animation-duration: 6s;
+    transition: 0.3s;
+    animation-timing-function: linear;
+    display: block;
+}
+
+.up img {
+    width: 50px;
+}
+
+.up:hover {
+    /* background-color: #2e586d; */
+}
+
+@keyframes position {
+    0% {
+        rotate: 0deg;
+        right: 25px;
+        bottom: 50px;
+    }
+
+    20% {
+        rotate: -60deg;
+        right: 50%;
+        bottom: 25%;
+    }
+
+    55% {
+        rotate: 30deg;
+        right: 80%;
+        bottom: 35%;
+    }
+
+    80% {
+        rotate: 60deg;
+        right: -10%;
+        bottom: 90%;
+    }
+
+    90% {
+        rotate: 0deg;
+        right: -10px;
+        bottom: -1000px;
+    }
+}
+
+/* End Up */
+/* ------------------------------------------------- */
+
+/* start lading  */
+.lading {
+    background-image: url(../image/Mount.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 54px);
+    text-align: center;
+}
+
+.lading .intro-text {
+    max-width: 500px;
+}
+
+.lading .intro-text h1 {
+    color: var(--main-color);
+    font-size: 75px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 780px) {
+    .lading .intro-text h1 {
+        font-size: 50px;
+    }
+}
+
+.lading .intro-text p {
+    max-width: 350px;
+    font-size: 15px;
+    /* color: #eee; */
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* end  lading  */
+/* ------------------------------------------------- */
+/* start features */
+.features {
+    background-color: #f6f6f6;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.features .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.features .container .box {
+    flex-grow: 1;
+    width: 300px;
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.features .container .box:hover {
+    box-shadow: -2px -2px 6px 0;
+}
+
+.features .container .box h2 {
+    color: var(--second-color);
+    padding: 10px;
+}
+
+.features .container .box p {
+    margin: 0 auto;
+    color: #333;
+    width: 250px;
+    line-height: 1.6;
+}
+
+.features .container .box svg {
+    color: var(--main-color);
+}
+
+/* end features */
+/* ------------------------------------------------- */
+
+/* start serveses */
+.services {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.services .container .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.services .container .services-content .colums .col {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.services .container .services-content .colums .col:hover {
+    box-shadow: -8px -8px 24px 0px #e2e2e2;
+}
+
+@media (max-width:767px) {
+    .services .container .services-content .colums .col {
+        flex-direction: column
+    }
+
+    .services .container .services-content .colums .col svg {
+        margin-bottom: 20px;
+    }
+}
+
+
+.services .container .services-content .colums .col svg {
+    color: var(--main-color);
+    width: 20rem;
+}
+
+.services .container .services-content .colums .col h3 {
+    color: var(--second-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.services .container .services-content .colums .col p {
+    color: #777;
+    line-height: 1.7;
+}
+
+.services .container .services-content .colums img {
+    width: 250px;
+    height: 275px;
+    border-radius: 15px;
+}
+
+@media(width <=1200px) {
+    .services .container .services-content .colums img {
+        display: none;
+    }
+}
+
+/* end serveses */
+/* start portfolio*/
+.portfolio {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: #eee;
+}
+
+.portfolio .container .content-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.portfolio .container .content-portfolio .box {
+    background-color: white;
+}
+
+.portfolio .container .content-portfolio .box.visible {
+    display: none;
+    transform: 0.3s;
+}
+
+.portfolio .container .content-portfolio .info-text {
+    padding: 20px;
+}
+
+.portfolio .container .content-portfolio .info-text h2 {
+    color: var(--second-color);
+    margin-bottom: 10px;
+}
+
+.portfolio .container .content-portfolio .info-text P {
+    line-height: 1.7;
+}
+
+.portfolio .container .content-portfolio .image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.portfolio .container .Show {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 64px;
+    margin-top: 30px;
+}
+
+.portfolio .container a {
+    /* border: 0.3px solid; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--second-color);
+    box-shadow: inset rgba(44, 71, 85, 0.9) 0 0px 0px 1px;
+}
+
+.portfolio .container a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    transition: 0.1s;
+    background: var(--second-color);
+}
+
+.portfolio .container a:hover::before {
+    height: 100%;
+}
+
+.portfolio .container a:hover {
+    color: var(--main-color);
+    border: none;
+}
+
+/* end  portfolio*/
+/*------------------------------- Start about-----------------------------*/
+.about {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.about .container {}
+
+.about .container .info-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    text-align: center;
+}
+
+@media (max-width:767px) {
+    .about .container .info-content {
+        flex-direction: column;
+    }
+}
+
+.about .container .info-content .image {
+    max-width: 100%;
+}
+
+.about .container .info-content .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.about .container .info-content .info-text {
+    flex-grow: 1;
+    /* بماذا لا ينفذ هذا الشطرط وياخذ كامل المساحة  */
+}
+
+.about .container .info-content .info-text p:first-child {
+    font-weight: bold;
+    line-height: 2.5;
+    font-size: 16px;
+
+}
+
+.about .container .info-content .info-text hr {
+    background: var(--main-color);
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    height: 2px;
+    outline: none;
+    border: none;
+}
+
+.about .container .info-content .info-text p:last-child {
+    font-size: 15px;
+    line-height: 2.5;
+    color: #777;
+}
+
+/*------------------------------- End about-----------------------------*/
+/*------------------------------- Start contact-----------------------------*/
+.contact {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: #eaeaea;
+
+}
+
+.contact .spacial-heading {
+    color: white;
+}
+
+.contact .spacial-heading+p {
+    margin-bottom: 10px;
+}
+
+.contact .info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .info-text p:first-child {
+    color: var(--second-color);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.contact .info-text p:nth-child(2) {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.contact .info-text div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .info-text div span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact .info-text div svg {
+    margin: 5px;
+    color: var(--second-color);
+}
+
+@media (max-width:767px) {
+
+    .contact .info-text p:first-child {
+        font-size: 18px;
+    }
+
+    .contact .info-text p:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .contact .info-text div span {
+        font-size: 0px;
+    }
+
+}
+
+/*------------------------------- End contact-----------------------------*/
+/*------------------------------- Start footer-----------------------------*/
+.footer {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--second-color);
+    color: white;
+    font-size: 15px;
+}
+
+.footer span {
+    color: var(--main-color);
+}
+
+/*------------------------------- End footer-----------------------------*/
